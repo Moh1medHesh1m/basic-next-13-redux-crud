@@ -1,5 +1,6 @@
+import { store } from '@/store/store'
 import './globals.css'
-
+import { Providers } from './provider'
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +13,9 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        
+          <Providers >{children}</Providers></body>
     </html>
   )
 }
